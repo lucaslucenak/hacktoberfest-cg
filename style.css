@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #201b2c;
+    width: 100vw;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw; /* vw = viewport WIDTH (é a porcentagem da largura da viewport (tela))*/
+    height: 100vh; /* vh = viewport HEIGHT */
+    background: #201b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login > h1 {
+    margin: 0;
+    font-size: 3vw;
+    color: aquamarine;
+}
+
+.left-login-image {
+    width: 20vw;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 70%; /* a porcentagem usada assim vai se referenciar ao tamanho da DIV que o "card-login" está inserido, ao invés de pegar a porcentagem do tamanho inteiro da tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 45px;
+    background: #2f2841;
+    border-radius: 25px;
+    box-shadow: 0px 10px 40px #00000056; /* sombra no eixo X, sombra no eixo Y, blur da sombra, cor da sombra */
+}
+
+.card-login > h1 {
+    color: #00ff80ea;
+    font-weight: 600;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* quando usado, troca os eixos das duas configurações abaixo */
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px; /* se colocar só um valor, este vale para os dois eixos */
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 18px;
+    outline: none;    
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background: #0f8;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00f57b;
+}
+
+.btn-login:hover{
+    background-color: #00eb7d;
+}
+
+.btn-login:active{
+    background-color: #0f8;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login > image {
+        width: 5vw;
+    }
+
+    .card-login{
+        width: ;
+    }
+}
